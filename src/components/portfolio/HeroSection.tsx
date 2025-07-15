@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
+import profilePicture from "@/assets/profile-picture.jpg";
 
 const HeroSection = () => {
   const [currentText, setCurrentText] = useState("");
@@ -53,12 +54,16 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 lg:px-8 py-20 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <div className="relative inline-block mb-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-hero shadow-2xl flex items-center justify-center text-4xl font-bold text-primary-foreground animate-fade-in">
-              PP
+            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-2xl animate-fade-in">
+              <img 
+                src={profilePicture} 
+                alt="Prakhar Porwal" 
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="absolute inset-0 rounded-full bg-gradient-hero opacity-30 animate-pulse"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-hero opacity-20 animate-pulse"></div>
           </div>
 
           {/* Main Heading */}
